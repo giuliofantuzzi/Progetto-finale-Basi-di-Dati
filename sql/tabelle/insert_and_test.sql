@@ -5,7 +5,7 @@ ALCUNE NOTE PER L'UTENTE:
   Per scrupolo ho commentato tutte le righe in cui i trigger bloccavano le azioni
   --> così da poter eseguire lo script in blocco per popolare (un minimo minimo!) il database
 ~ Molti attributi saranno NULL (es: arbitri non assegnati a partita).
-  --> Ho inserito il minimo necessario la verifica di query,SP e trigger
+  --> Ho inserito il minimo necessario la verifica del corretto funzionamento di query,SP e trigger
 */
 
 -- SETTINGS
