@@ -6,7 +6,7 @@ Questa cartella contiene gli script sql per la creazione del database *PrimaCate
 
 - `insert_and_test.sql`: questo script contiene il codice per l'inserimento di alcuni dati nel database. Inoltre, esso contiene alcuni semplici test per controllare l'effettivo funzionamento di trigger e vincoli.
 
-## ISTRUZIONI (IMPORTANTI) PER L'USO 
+## ISTRUZIONI (<ins>IMPORTANTI</ins>) PER L'USO 
 1. Ho scelto volutamente di commentare tutte le righe in cui venivano effettuati i test, in quanto i vari trigger e vincoli bloccavano (giustamente!) l'esecuzione del codice "errato";
 
 2. Per comodità, le tabelle sono state riempite solo con il **minimo indispensabile**: molti attributi non sono stati volutamente inseriti (*es: ci saranno partite non assegnate ad un arbitro*);
