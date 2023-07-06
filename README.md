@@ -9,4 +9,4 @@ con i relativi risultati, tenendo traccia di varie informazioni riguardanti squa
 Per maggiori dettagli sul progetto consultare la cartella [report](report/)
 
 ## Codice SQL
-Gli script di codice SQL sono disponibili alla cartella [sql](sql/)
+Gli script di codice SQL (e alcune informazioni utili per usarli) sono disponibili alla cartella [sql](sql/)
