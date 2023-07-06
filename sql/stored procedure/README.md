@@ -1,7 +1,7 @@
 # Stored Procedure
 In questa cartella sono presenti gli script sql delle seguenti stored procedure:
 
-- `spClassificaGirone.sql`: SP per determinare la classifica marcatori di un girone a scelta (parametro in input);
+- `spClassificaGirone.sql`: SP per determinare la classifica di un girone a scelta (parametro in input). A parità di punti beneficia la squadra con la miglior differenza reti;
 
 - `spClassificaMarcatoriGirone.sql`: SP per determinare la classifica marcatori di un girone a scelta (parametro in input);
 
