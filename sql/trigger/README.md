@@ -16,7 +16,7 @@ delle squadre coinvolte;
 
 - `triggerUpdateTotaleGoalGiocatore.sql`: trigger che aggiorna automaticamente l'attributo TotaleGoal di un giocatore quando egli risulta marcatore in una partita a cui ha partecipato
 
-- `triggerControlloMaxSpettatori.sql`: trigger per evitare che venga inserito un numero di spettatori maggiore della capienza massima dello stadio;
+- `triggerControlloMaxSpettatori.sql`: trigger per evitare che in una partita venga inserito un numero di spettatori maggiore della capienza massima dello stadio;
 
 ### Nota
 Per come ho scelto di strutturare il database, l’arbitro e il risultato possono essere assegnati in un momento successivo all’inserimento di una partita. Nella realtà infatti, ciò che si fa è stilare ad inizio campionato il calendario di tutte le partite , per poi aggiornarlo man mano inserendo arbitri, risultati ed altri dettagli (es: numero spettatori). Nulla vieta però di inserire questi dati quando si inserisce una partita: è dunque opportuno che alcuni trigger, oltre che in UPDATE, vengano definiti anche in INSERT (magari definendo
