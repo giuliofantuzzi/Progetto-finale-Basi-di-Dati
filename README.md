@@ -1,5 +1,5 @@
 # Progetto finale corso Basi di Dati
-Questa repository contiene il mio progetto per il corso *Basi di dati* (079IN), a.a. 2022/2023, Università degli studi di Trieste.
+Questa repository contiene il mio progetto per il corso *Basi di dati* (079IN), a.a. 2022/2023
 
 ## Report
 Si vuole realizzare una base di dati per gestire una stagione di campionato di calcio di Prima
