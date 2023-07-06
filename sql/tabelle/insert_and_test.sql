@@ -107,7 +107,7 @@ UPDATE Partita SET GoalCasa=2,GoalTrasferta=0 WHERE ID='A0101';
 INSERT INTO Partecipazione VALUES('FNTGLIO1R16E473H','A0101', 'Centrocampista',2,FALSE,FALSE);
 
 -- Dopo l'inserimento
-select TotaleGoal from Giocatore where CF='FNTGLIO1R16E473H'; -- campo aggiornato :)
+SELECT TotaleGoal FROM Giocatore WHERE CF='FNTGLIO1R16E473H'; -- campo aggiornato :)
 SELECT * FROM Squadra WHERE Nome='USD Torre di Mosto' OR Nome='AC Ceggia'; -- valori aggiornati :)
 /*--------------------------------------------------------------------------------------------------------------------------------*/
 
