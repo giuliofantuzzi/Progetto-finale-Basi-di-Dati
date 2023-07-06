@@ -122,16 +122,17 @@ INSERT INTO Partita(ID,Giornata,Data,SquadraCasa,SquadraTrasferta,Stadio) VALUES
 INSERT INTO Partita(ID,Giornata,Data,SquadraCasa,SquadraTrasferta,Stadio) VALUES('A0201',2,'2023-09-08','AC Ceggia','ACD San stino','Impianto comunale');
 INSERT INTO Partita(ID,Giornata,Data,SquadraCasa,SquadraTrasferta,Stadio) VALUES('A0202',2,'2023-09-08','Jesolo FC','USD Torre di Mosto','Stadio Picchi');
 
-UPDATE Partita SET GoalCasa=3,GoalTrasferta=0 WHERE ID='A0102';
+UPDATE Partita SET GoalCasa=3,GoalTrasferta=0,Spettatori=150 WHERE ID='A0102';
 INSERT INTO Partecipazione VALUES('ANDPNTO1R15F473H','A0102', 'Attaccante',3,FALSE,FALSE);
 
-UPDATE Partita SET GoalCasa=2,GoalTrasferta=2 WHERE ID='B0101';
+UPDATE Partita SET GoalCasa=2,GoalTrasferta=2,Spettatori=2700 WHERE ID='B0101';
 INSERT INTO Partecipazione VALUES('MARRINO1R15E471H','B0101', 'Portiere',1,FALSE,FALSE);
 
-UPDATE Partita SET GoalCasa=1,GoalTrasferta=1 WHERE ID='A0201';
+UPDATE Partita SET GoalCasa=1,GoalTrasferta=1,Spettatori=78 WHERE ID='A0201';
 INSERT INTO Partecipazione VALUES('ANDPNTO1R15F473H','A0201', 'Centrocampista',1,FALSE,FALSE);
 INSERT INTO Partecipazione VALUES('CHEVERO1R12G472H','A0201', 'Centrocampista',1,FALSE,FALSE);
 
-UPDATE Partita SET GoalCasa=1,GoalTrasferta=1 WHERE ID='A0202';
+-- UPDATE Partita SET GoalCasa=1,GoalTrasferta=1,Spettatori=4001 WHERE ID='A0202'; giustamente bloccata dal trigger MaxSpettatori
+UPDATE Partita SET GoalCasa=1,GoalTrasferta=1,Spettatori=3792 WHERE ID='A0202';
 INSERT INTO Partecipazione VALUES('FNTGVNO1I17E473H','A0201', 'Difensore',1,FALSE,FALSE);
 INSERT INTO Partecipazione VALUES('FNTGLIO1R16E473H','A0201', 'Centrocampista',0,TRUE,FALSE); -- stavolta giulio non segna, si arrabbia e viene ammonito
