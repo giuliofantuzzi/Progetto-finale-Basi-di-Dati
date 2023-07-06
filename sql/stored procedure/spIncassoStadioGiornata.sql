@@ -10,3 +10,4 @@ BEGIN
     GROUP BY P.Stadio;
 END $$
 DELIMITER;
+-- CALL IncassoStadioGiornata(1);
