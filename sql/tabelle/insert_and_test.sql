@@ -9,9 +9,9 @@ ALCUNE NOTE PER L'UTENTE:
 */
 
 -- SETTINGS
-use PrimaCategoriaVeneta;
-show tables;
-show triggers;
+USE PrimaCategoriaVeneta;
+-- SHOW tables;
+-- SHOW triggers;
 
 -- INSERIMENTO GIRONI
 INSERT INTO Girone VALUES ('A');
