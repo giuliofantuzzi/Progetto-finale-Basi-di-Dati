@@ -9,5 +9,5 @@ BEGIN
     WHERE P.Giornata = giornata
     GROUP BY P.Stadio;
 END $$
-DELIMITER;
+DELIMITER ;
 -- CALL IncassoStadioGiornata(1);
