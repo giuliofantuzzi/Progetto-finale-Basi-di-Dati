@@ -7,9 +7,7 @@ In questa cartella sono presenti gli script sql dei seguenti trigger:
 - `triggerControlloAssegnazioneArbitro.sql`: trigger per le designazioni arbitrali: si richiede che un arbitro non possa dirigere una
 gara in cui gioca una squadra (se esiste) del suo paese di residenza
 
-- `triggerControlloPatentinoAllenatore.sql`: trigger per evitare che la gestione delle squadre venga affidata ad allenatori non in
-possesso di patentino. In particolare, volevo garantire che il trigger agisse sia in fase di inserimento che di modifica. Siccome mySQL -purtroppo- non prevede la
-possibilità di farlo in un unico trigger, ho valutato di creare una procedura da richiamare poi in entrambi i trigger (per non appesantire il codice e per facilitare eventuali modifiche future)
+- `triggerControlloPatentinoAllenatore.sql`: trigger per evitare che la gestione delle squadre venga affidata ad allenatori non in possesso del patentino di base. In particolare, volevo garantire che il trigger agisse sia in fase di inserimento che di modifica. Siccome mySQL -purtroppo- non prevede la possibilità di farlo in un unico trigger, ho valutato di creare una procedura da richiamare poi in entrambi i trigger (per non appesantire il codice e per facilitare eventuali modifiche future)
 
 - `triggerUpdateStatisticheSquadra.sql`: trigger che quando viene inserito un risultato di una sua partita aggiorna automaticamente gli attributi Vittorie,Pareggi,Sconfitte,GoalFatti,GoalSubiti
 delle squadre coinvolte;
