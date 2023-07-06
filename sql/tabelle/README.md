@@ -12,5 +12,5 @@ Questa cartella contiene gli script sql per la creazione del database *PrimaCate
 2. Per comodità, le tabelle sono state riempite solo con il **minimo indispensabile**: molti attributi non sono stati volutamente inseriti (*es: ci saranno partite non assegnate ad un arbitro*);
 
 3. È possibile eseguire lo script `insert_and_test.sql` in blocco, così da popolare un minimo il database. I dati da me inseriti dovrebbero bastare per poter controllare e testare TUTTE le query, stored procedure e trigger
-  - <ins>**NB: assicurarsi creare i trigger PRIMA di eseguire lo script `insert_and_test.sql`**</ins>
+  - <ins>**NB: assicurarsi di creare i trigger PRIMA di eseguire lo script `insert_and_test.sql`**</ins>
  
