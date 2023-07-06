@@ -1,13 +1,3 @@
-/*
-ALCUNE NOTE PER L'UTENTE: 
-~ Assicurarsi di attivare tutti i trigger!
-~ Questo script contiene alcuni test per controllare l'effettivo funzionamento dei trigger
-  Per scrupolo ho commentato tutte le righe in cui i trigger bloccavano le azioni
-  --> così da poter eseguire lo script in blocco per popolare (un minimo minimo!) il database
-~ Molti attributi saranno NULL (es: arbitri non assegnati a partita).
-  --> Ho inserito il minimo necessario la verifica di query,SP e trigger
-*/
-
 -- SETTINGS
 USE PrimaCategoriaVeneta;
 -- SHOW tables;
