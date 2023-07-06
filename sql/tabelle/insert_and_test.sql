@@ -5,7 +5,7 @@ ALCUNE NOTE PER L'UTENTE:
   Per scrupolo ho commentato tutte le righe in cui i trigger bloccavano le azioni
   --> così da poter eseguire lo script in blocco per popolare (un minimo minimo!) il database
 ~ Molti attributi saranno NULL (es: arbitri non assegnati a partita).
-  --> Ho inserito il minimo necessario la verifica del corretto funzionamento di query,SP e trigger
+  --> Ho inserito il minimo necessario la verifica di query,SP e trigger
 */
 
 -- SETTINGS
@@ -22,7 +22,7 @@ INSERT INTO Girone VALUES ('E');
 INSERT INTO Girone VALUES ('F');
 INSERT INTO Girone VALUES ('G');
 INSERT INTO Girone VALUES ('H');
-select* from Girone;
+-- select* from Girone;
 
 -- INSERIMENTO STADI (inserisco solo alcuni campi necessari)
 INSERT INTO Stadio(Nome,Capienza,CostoBiglietto) VALUES('Stadio Lino madiotto',400,7);
@@ -31,7 +31,7 @@ INSERT INTO Stadio(Nome,Capienza,CostoBiglietto) VALUES('Campo Zanardo',200,5);
 INSERT INTO Stadio(Nome,Capienza,CostoBiglietto) VALUES('Stadio Picchi',4000,9);
 INSERT INTO Stadio(Nome,Capienza,CostoBiglietto) VALUES('Stadio olimpico Caorle',2000,10);
 INSERT INTO Stadio(Nome,Capienza,CostoBiglietto) VALUES('Stadio Teghil',5000,8);
-select* from Stadio;
+-- select* from Stadio;
 
 -- INSERIMENTO SQUADRE (di default allenatore e stadio non sono ancora assegnati, e W P L e GF GS sono inizialmente 0)
 INSERT INTO Squadra(Nome,Paese,Girone, Stadio) VALUES ('USD Torre di Mosto', 'Torre di Mosto','A', 'Stadio Lino madiotto');
@@ -39,7 +39,7 @@ INSERT INTO Squadra(Nome,Paese,Girone, Stadio) VALUES ('AC Ceggia', 'Ceggia','A'
 INSERT INTO Squadra(Nome,Paese,Girone, Stadio) VALUES ('ACD San stino', 'San stino di Livenza','A','Campo Zanardo');
 INSERT INTO Squadra(Nome,Paese,Girone, Stadio) VALUES ('Calcio Caorle', 'Caorle','B','Stadio olimpico Caorle');
 INSERT INTO Squadra(Nome,Paese,Girone, Stadio) VALUES ('Lignano', 'Lignano Sabbiadoro','B','Stadio Teghil');
-select* from Squadra;
+-- select* from Squadra;
 
 -- INSERIMENTO GIOCATORI (inserisco solo alcuni campi necessari)
 INSERT INTO Giocatore(CF,Nome,Cognome, DataDiNascita, RuoloPrincipale, Squadra) VALUES('FNTGLIO1R16E473H', 'Giulio','Fantuzzi','2001-10-16','Attaccante', 'USD Torre di Mosto');
@@ -50,7 +50,7 @@ INSERT INTO Giocatore(CF,Nome,Cognome, DataDiNascita, RuoloPrincipale, Squadra) 
 INSERT INTO Giocatore(CF,Nome,Cognome, DataDiNascita, RuoloPrincipale, Squadra) VALUES('LUCBNDO1R16E474H', 'Luca','Badon','1997-01-02','Centrocampista', 'AC Ceggia');
 -- Giocatore svincolato
 INSERT INTO Giocatore(CF,Nome,Cognome, DataDiNascita, RuoloPrincipale) VALUES('SILCOLO1T26E444L', 'Silvestro','Colosso','1980-02-24','Difensore');
-select* from Giocatore;
+-- select* from Giocatore;
 
 -- INSERIMENTO ALLENATORI
 INSERT INTO Allenatore(CF,Patentino) VALUES ('MAUBLIO1R16P472H',TRUE);
@@ -59,12 +59,12 @@ INSERT INTO Allenatore(CF,Patentino) VALUES ('NITCLIO1E14F473L',TRUE);
 INSERT INTO Allenatore(CF,Patentino) VALUES ('UBLCREO1R16L479H',TRUE);
 INSERT INTO Allenatore(CF,Patentino) VALUES ('CTAELIO1S16E475H',TRUE);
 INSERT INTO Allenatore(CF,Patentino) VALUES ('BISOLIO1R16E476B',FALSE);
-select* from Allenatore;
+-- select* from Allenatore;
 
 -- INSERIMENTO ARBITRI
 INSERT INTO Arbitro VALUES('ARBGLIO1R16E473H', NULL,NULL,NULL,'Torre di Mosto', 'Sez. Portogruaro');
 INSERT INTO Arbitro VALUES('ARBDSJO1F19E473P', NULL,NULL,NULL,'Meolo', 'Sez. Treviso');
-
+-- select* from Arbitro;
 
 /*--------------------------------------------------------------------------------------------------------------------------------*/
 -- ALCUNI TEST PER VEDERE SE VINCOLI UNIQUE E TRIGGER FUNZIONANO (ed altri inserimenti)
@@ -103,7 +103,6 @@ UPDATE Partita  SET Arbitro='ARBDSJO1F19E473P' WHERE ID= 'A0101'; -- qui invece 
 -- Prima dell'inserimento:
 SELECT * FROM Squadra; -- vittorie,sconfitte,pareggi,goal fatti e subiti sono 0
 SELECT TotaleGoal FROM Giocatore WHERE CF='FNTGLIO1R16E473H'; -- TotaleGoal è ancora 0
-
 UPDATE Partita SET GoalCasa=2,GoalTrasferta=0 WHERE ID='A0101';
 INSERT INTO Partecipazione VALUES('FNTGLIO1R16E473H','A0101', 'Centrocampista',2,FALSE,FALSE);
 
