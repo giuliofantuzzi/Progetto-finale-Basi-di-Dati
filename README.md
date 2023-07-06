@@ -10,3 +10,7 @@ Per maggiori dettagli sul progetto consultare la cartella [report](report/)
 
 ## Codice SQL
 Gli script di codice SQL (e alcune informazioni utili per usarli) sono disponibili alla cartella [sql](sql/)
+
+## Schemi
+Le immagini di schema concettuale e logico sono disponibili alla cartella [schemi](schemi/)
+
